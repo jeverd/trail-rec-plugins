@@ -1,0 +1,20 @@
+{
+  "name": "trail-rec",
+  "owner": {
+    "name": "Ariff",
+    "url": "https://trail.ariff.ai"
+  },
+  "metadata": {
+    "description": "The trail-rec plugin for Claude Code and Cowork."
+  },
+  "plugins": [
+    {
+      "name": "trail-rec",
+      "source": "./trail-rec",
+      "description": "Drive and record your own Chrome as proof that a change works, with captions and a link to share, and work through teammates’ feedback on recordings: pull the marks, fix them, reply, resolve.",
+      "version": "0.1.9",
+      "category": "development",
+      "homepage": "https://trail.ariff.ai"
+    }
+  ]
+}

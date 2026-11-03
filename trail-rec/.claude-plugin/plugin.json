@@ -1,0 +1,22 @@
+{
+  "name": "trail-rec",
+  "displayName": "trail-rec",
+  "version": "0.1.9",
+  "description": "Drive and record your own Chrome as proof that a change works, with captions and a link to share, and work through teammates’ feedback on recordings: pull the marks, fix them, reply, resolve.",
+  "author": {
+    "name": "Ariff",
+    "url": "https://trail.ariff.ai"
+  },
+  "homepage": "https://trail.ariff.ai",
+  "license": "MIT",
+  "keywords": [
+    "browser",
+    "chrome",
+    "recording",
+    "proof",
+    "feedback",
+    "qa",
+    "testing"
+  ],
+  "icon": "./assets/icon.png"
+}
