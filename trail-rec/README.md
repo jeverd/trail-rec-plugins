@@ -42,14 +42,21 @@ Works in **Claude Code** and in **Cowork** (when the session runs on your comput
 - **Chrome.** The tools talk to the trail-rec extension in your Chrome through a local
   connection on your computer. Claude can only drive Chrome after you turn on "Let
   agents control this browser" in the extension's popup.
-- **Your account.** Recordings stay on your computer until you or Claude upload one.
-  An upload goes to trail-rec (trail.ariff.ai) and is private to you until you share it.
-  Reading and replying to feedback uses your trail-rec account. Sign-in is by a code
-  emailed to you.
+- **What it sends, and where.** The CLI talks only to trail-rec: `trail.ariff.ai` and
+  its database and file storage at Supabase (`yrhoumvbzbiirrpzsmjg.supabase.co`).
+  Recordings stay on your computer until you or Claude upload one; an upload is private
+  to you until you share it. Reading and replying to feedback uses your trail-rec
+  account. Sign-in is by a code emailed to you. Once a day the CLI checks
+  `trail.ariff.ai/cli/version.json` for a newer version, with no account details.
+- **What a recording holds.** The recorded tab's page structure and changes, clicks,
+  scrolling and typing (typed text hidden by default), console messages, network
+  requests (addresses, methods, status codes, timings), errors, and a video of the tab.
+  Emails, card numbers, and tokens are scrubbed from console output and addresses
+  before anything is saved.
 - **Tool labels.** Every tool is labeled as read-only or as one that changes something,
   so Claude asks before the ones that act on a page or your recordings.
 
-Privacy: https://trail.ariff.ai/privacy
+Privacy: https://trail.ariff.ai/privacy. Setup, tools, and help: https://trail.ariff.ai/claude
 
 ## If something doesn't work
 
