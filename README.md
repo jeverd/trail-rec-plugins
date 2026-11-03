@@ -15,6 +15,8 @@ Claude Code:
 
 Cowork: Customize, Plugins, Add, Add marketplace: `jeverd/trail-rec-plugins`.
 
-The plugin needs the trail-rec CLI and the Chrome extension; see [trail-rec/README.md](trail-rec/README.md).
+The plugin brings the trail-rec CLI with it. You also need Node 20 or newer and the
+[trail-rec Chrome extension](https://chromewebstore.google.com/detail/trail-rec/mapophjibjnhalgcpaekmhlgjdbjmjal);
+see [trail-rec/README.md](trail-rec/README.md).
 
 This repository is published from trail-rec's own repository. Changes made here are overwritten.

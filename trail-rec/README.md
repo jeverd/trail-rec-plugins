@@ -9,24 +9,24 @@ Works in **Claude Code** and in **Cowork** (when the session runs on your comput
 
 ## Before you start
 
-1. Install trail-rec. Open Terminal and run:
+Nothing to install in Terminal: the plugin brings the trail-rec CLI with it. You need
+Node 20 or newer on your computer (https://nodejs.org).
 
-   ```sh
-   curl -fsSL https://trail.ariff.ai/install.sh | sh
-   ```
-
-   It needs Node 20 or newer, and puts one file in `~/.local/bin`.
-2. Add the trail-rec extension to Chrome:
+1. Add the trail-rec extension to Chrome:
    https://chromewebstore.google.com/detail/trail-rec/mapophjibjnhalgcpaekmhlgjdbjmjal
-3. Add this plugin. In Claude Code:
+2. Add this plugin. In Claude Code:
 
    ```
-   /plugin install trail-rec --marketplace jeverd/trail-rec-plugins
+   /plugin marketplace add jeverd/trail-rec-plugins
+   /plugin install trail-rec@trail-rec
    ```
 
-   In Cowork: Customize, Plugins, Add, Add marketplace: `jeverd/trail-rec-plugins`.
-4. Ask Claude something like "check my trail-rec setup". Claude connects Chrome, helps
-   you sign in, and tells you if anything is missing.
+   In Cowork: Customize, Plugins, Add marketplace: `jeverd/trail-rec-plugins`, then
+   install trail-rec.
+3. Ask Claude something like "check my trail-rec setup". Claude helps you sign in and
+   tells you if anything is missing.
+4. For Claude to drive Chrome, turn on "Let agents control this browser" in the
+   extension's popup. It's off until you do.
 
 ## Try it
 
@@ -36,9 +36,17 @@ Works in **Claude Code** and in **Cowork** (when the session runs on your comput
 
 ## What it runs and sends
 
-- **What it starts.** The plugin starts one program on your computer:
-  `scripts/start.mjs`. It finds the trail-rec CLI you installed and runs `trail-rec mcp`,
-  which gives Claude the trail-rec tools. The plugin downloads nothing.
+- **What it starts.** The plugin starts one program on your computer,
+  `scripts/start.mjs`, which runs the trail-rec CLI that comes in the plugin
+  (`bin/trail-rec.mjs`) as `trail-rec mcp`: that gives Claude the trail-rec tools. The
+  plugin downloads nothing.
+- **What it writes on your computer.** A copy of that CLI in
+  `~/.local/share/trail-rec/plugin/` (the plugin's own folder moves with each version,
+  and Chrome needs a path that stays put), Chrome's native messaging file for the
+  trail-rec extension (`com.trailrec.bridge.json`, in Chrome's NativeMessagingHosts
+  folder) with the small script it starts in `~/.config/trail-rec/`, and your sign-in
+  in `~/.config/trail-rec/`. `trail-rec bridge uninstall` removes the Chrome link.
+- **Updates.** The CLI updates with the plugin.
 - **Chrome.** The tools talk to the trail-rec extension in your Chrome through a local
   connection on your computer. Claude can only drive Chrome after you turn on "Let
   agents control this browser" in the extension's popup.
