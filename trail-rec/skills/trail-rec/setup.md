@@ -31,7 +31,8 @@ agent control, and says how to fix each problem. Run it before recording, and wh
 ## The Claude plugin (Claude Code and Cowork)
 
 The trail-rec plugin brings this skill and the tools (it starts `trail-rec mcp` on the
-user's computer). It still needs trail-rec installed (above) and the Chrome extension.
+user's computer). Install it in Claude Code with `/plugin marketplace add jeverd/trail-rec-plugins`
+then `/plugin install trail-rec@trail-rec`; in Cowork, from Customize, Plugins, Add marketplace. It still needs trail-rec installed (above) and the Chrome extension.
 In Cowork, commands run in a sandbox, so the user runs the install line in their own
 Terminal; sign in with `sign_in_start` and `sign_in_finish`, and connect Chrome with
 `bridge_install`, all from the tools.
