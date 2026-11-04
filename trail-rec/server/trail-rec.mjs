@@ -27912,7 +27912,7 @@ function fromPlugin() {
 	}
 }
 /** How to update the plugin, in Claude Code and in Cowork. */
-var PLUGIN_UPDATE = "Update the trail-rec plugin: in Claude Code run `claude plugin update trail-rec@trail-rec` and restart (or turn on auto-update: /plugin, Marketplaces, trail-rec); in Cowork, Check for updates under Customize, Plugins (or turn on Sync automatically).";
+var PLUGIN_UPDATE = "Update the trail-rec plugin: in Claude Code run `claude plugin update trail-rec@trail-rec` and restart (or turn on auto-update: /plugin, Marketplaces, trail-rec); in Cowork, Check for updates on the trail-rec marketplace under Customize, Plugins.";
 /** Newer than `a`? Compares the dotted part of versions like 0.1.9+d9c46a8. */
 function newer(b, a) {
 	const parts = (v) => v.split("+")[0].split(".").map(Number);
@@ -28895,7 +28895,7 @@ async function runMcp(version) {
 }
 //#endregion
 //#region cli/main.ts
-var VERSION = "0.1.9+66e1281";
+var VERSION = "0.1.9+992f246";
 var HELP = `trail-rec: teammates' feedback on shared recordings, for agents
 
 Usage:

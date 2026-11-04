@@ -20,8 +20,9 @@ The plugin brings the trail-rec CLI with it. You also need Node 20 or newer and 
 see [trail-rec/README.md](trail-rec/README.md).
 
 Updates: every change is published here as a new commit, and Claude treats each commit as a
-new version. To get them as they come, turn on auto-update for this marketplace: in Claude
-Code, `/plugin`, Marketplaces, trail-rec, Enable auto-update; in Cowork, Sync automatically.
-Or update by hand: `claude plugin update trail-rec@trail-rec`, or Check for updates in Cowork.
+new version. In Claude Code, turn on auto-update for this marketplace to get them as they
+come: `/plugin`, Marketplaces, trail-rec, Enable auto-update (or update by hand:
+`claude plugin update trail-rec@trail-rec`). In Cowork, choose Check for updates on the
+marketplace under Customize, Plugins.
 
 This repository is published from trail-rec's own repository. Changes made here are overwritten.

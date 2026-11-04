@@ -47,8 +47,9 @@ Node 20 or newer on your computer (https://nodejs.org).
   folder) with the small script it starts in `~/.config/trail-rec/`, and your sign-in
   in `~/.config/trail-rec/`. `trail-rec bridge uninstall` removes the Chrome link.
 - **Updates.** The CLI updates with the plugin. Each change is a new version; to get
-  them as they come, turn on auto-update for the trail-rec marketplace (Claude Code:
-  `/plugin`, Marketplaces; Cowork: Sync automatically).
+  them as they come in Claude Code, turn on auto-update for the trail-rec marketplace
+  (`/plugin`, Marketplaces). In Cowork, choose Check for updates on the marketplace
+  (Customize, Plugins); installed from Claude's directory, updates come by themselves.
 - **Chrome.** The tools talk to the trail-rec extension in your Chrome through a local
   connection on your computer. Claude can only drive Chrome after you turn on "Let
   agents control this browser" in the extension's popup.
