@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 // Starts the trail-rec tools for Claude: runs the trail-rec CLI that comes with this
-// plugin (bin/trail-rec.mjs) as `trail-rec mcp`, an MCP server over stdio. Nothing
+// plugin (server/trail-rec.mjs) as `trail-rec mcp`, an MCP server over stdio. Nothing
 // to install but the Chrome extension, and this file downloads nothing.
 //
 // First, two things so Chrome can reach it:
@@ -23,7 +23,7 @@ import { fileURLToPath } from 'node:url';
 
 const INSTALL = 'curl -fsSL https://trail.ariff.ai/install.sh | sh';
 const NODE_MAJOR = Number(process.versions.node.split('.')[0]);
-const BUNDLED = fileURLToPath(new URL('../bin/trail-rec.mjs', import.meta.url));
+const BUNDLED = fileURLToPath(new URL('../server/trail-rec.mjs', import.meta.url));
 const SETTLED = path.join(process.env.XDG_DATA_HOME ?? path.join(homedir(), '.local/share'), 'trail-rec/plugin/trail-rec.mjs');
 
 /** The plugin's CLI, copied where it stays put (only rewritten when it changed). */

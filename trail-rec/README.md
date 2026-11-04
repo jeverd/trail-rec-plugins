@@ -38,7 +38,7 @@ Node 20 or newer on your computer (https://nodejs.org).
 
 - **What it starts.** The plugin starts one program on your computer,
   `scripts/start.mjs`, which runs the trail-rec CLI that comes in the plugin
-  (`bin/trail-rec.mjs`) as `trail-rec mcp`: that gives Claude the trail-rec tools. The
+  (`server/trail-rec.mjs`) as `trail-rec mcp`: that gives Claude the trail-rec tools. The
   plugin downloads nothing.
 - **What it writes on your computer.** A copy of that CLI in
   `~/.local/share/trail-rec/plugin/` (the plugin's own folder moves with each version,
