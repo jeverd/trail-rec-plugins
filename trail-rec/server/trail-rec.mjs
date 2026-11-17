@@ -28895,7 +28895,7 @@ async function runMcp(version) {
 }
 //#endregion
 //#region cli/main.ts
-var VERSION = "0.1.9+cb9681f";
+var VERSION = "0.1.10+2488c40";
 var HELP = `trail-rec: teammates' feedback on shared recordings, for agents
 
 Usage:
